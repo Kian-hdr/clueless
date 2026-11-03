@@ -22,6 +22,8 @@
   <img src="https://img.shields.io/badge/Apple%20Silicon-Swift-555555" alt="Swift on Apple Silicon">
 </div>
 
+<p align="center"><img src="docs/images/answer-dark.png" width="560" alt="Expanded Clueless answer card in dark mode"></p>
+
 Clueless transcribes your Mac mic and call audio separately, then streams a short opening you can read at a glance. Use it for interview practice, or switch to notetaker mode when you just want a transcript. English and German are supported.
 
 ## Screenshots
@@ -29,8 +31,6 @@ Clueless transcribes your Mac mic and call audio separately, then streams a shor
 ### Dark mode
 
 ![Compact Clueless floating controls in dark mode](docs/images/compact-dark.png)
-
-![Expanded Clueless answer card in dark mode](docs/images/answer-dark.png)
 
 ### Light mode
 
