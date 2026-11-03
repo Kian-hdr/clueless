@@ -1,18 +1,18 @@
-# Clueless
+<h1 align="center">Clueless</h1>
 
-A macOS interview practice assistant and meeting notetaker.
+<p align="center">A macOS interview practice assistant and meeting notetaker.</p>
 
-<img src="docs/images/icon.png" alt="Clueless app icon" width="72">
+<p align="center"><img src="docs/images/icon.png" alt="Clueless app icon" width="72"></p>
 
-## Download
+<h2 align="center">Download</h2>
 
-<p>
+<p align="center">
 <a href="https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg"><img src="docs/assets/downloads/download_1.svg" width="240" height="48" alt="Download for macOS"></a>
 </p>
 
-[DMG · Preview · Apple silicon · v0.3.0 · macOS 14.2 or later](https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg)
+<p align="center"><a href="https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg">DMG · Preview · Apple silicon · v0.3.0 · macOS 14.2 or later</a></p>
 
-[Install with Homebrew](#install-with-homebrew) · [Release notes](https://github.com/Kian-hdr/clueless/releases/tag/v0.3.0)
+<p align="center"><a href="#install-with-homebrew">Install with Homebrew</a> · <a href="https://github.com/Kian-hdr/clueless/releases/tag/v0.3.0">Release notes</a></p>
 
 <div align="center">
   
