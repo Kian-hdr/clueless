@@ -1,0 +1,13 @@
+.build/
+dist/
+.DS_Store
+*.xcuserstate
+.swiftpm/
+.private/
+.env
+.env.*
+*.p8
+*.p12
+*.pem
+*.key
+__pycache__/

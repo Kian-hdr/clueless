@@ -1,0 +1,85 @@
+{
+  "fill-specializations": [
+    {
+      "value": {
+        "linear-gradient": [
+          "extended-srgb:0.31,0.32,0.57,1",
+          "extended-srgb:0.12,0.13,0.25,1"
+        ]
+      }
+    },
+    {
+      "appearance": "dark",
+      "value": {
+        "linear-gradient": [
+          "extended-srgb:0.19,0.20,0.34,1",
+          "extended-srgb:0.075,0.08,0.14,1"
+        ]
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "Listening",
+      "lighting": "combined",
+      "specular": false,
+      "shadow": {
+        "kind": "none",
+        "opacity": 0
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0
+      },
+      "layers": [
+        {
+          "name": "Listening waveform",
+          "image-name": "Listening_Wave.svg",
+          "glass": false,
+          "fill-specializations": [
+            {
+              "value": {
+                "solid": "extended-srgb:0.13,0.14,0.24,1"
+              }
+            },
+            {
+              "appearance": "dark",
+              "value": {
+                "solid": "extended-srgb:0.12,0.13,0.22,1"
+              }
+            },
+            {
+              "appearance": "tinted",
+              "value": {
+                "solid": "extended-srgb:0.12,0.12,0.12,1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Conversation",
+      "lighting": "combined",
+      "specular": true,
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.28
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.12
+      },
+      "layers": [
+        {
+          "name": "Conversation bubble",
+          "image-name": "Conversation.svg",
+          "glass": true
+        }
+      ]
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared"
+  }
+}
