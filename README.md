@@ -2,7 +2,7 @@
 
 <p align="center">A macOS interview practice assistant and meeting notetaker.</p>
 
-<p align="center"><img src="docs/images/icon.png" alt="Clueless app icon" width="72"></p>
+<p align="center"><img src="docs/images/icon.png" alt="Clueless app icon" width="96"></p>
 
 <h2 align="center">Download</h2>
 
