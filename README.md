@@ -2,8 +2,9 @@
   <img src="docs/images/icon.png" width="128" alt="Clueless app icon">
   <h1>Clueless</h1>
   <p>A native macOS interview practice assistant and meeting notetaker.</p>
+  <a href="https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg"><img src="docs/images/download-for-mac.svg" width="224" height="48" alt="Download for Mac"></a>
+  <p><strong>Apple Silicon · macOS 14.2 or later</strong></p>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-555555" alt="MIT license"></a>
-  <img src="https://img.shields.io/badge/macOS-14.2%2B-555555" alt="macOS 14.2 or newer">
   <img src="https://img.shields.io/badge/Apple%20Silicon-Swift-555555" alt="Swift on Apple Silicon">
 </div>
 
