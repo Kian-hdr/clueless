@@ -2,15 +2,21 @@
   <img src="docs/images/icon.png" width="128" alt="Clueless app icon">
   <h1>Clueless</h1>
   <p>A native macOS interview practice assistant and meeting notetaker.</p>
-  <a href="https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg"><img src="docs/images/download-for-mac.svg" width="224" height="48" alt="Download macOS DMG · Apple silicon preview"></a>
-  <p><strong>Preview v0.3.0 · Apple silicon · macOS 14.2 or later</strong></p>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-555555" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/Apple%20Silicon-Swift-555555" alt="Swift on Apple Silicon">
 </div>
 
-Clueless transcribes your Mac mic and call audio separately, then streams a short opening you can read at a glance. Use it for interview practice, or switch to notetaker mode when you just want a transcript. English and German are supported.
+## Download
 
-[Download preview DMG](https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg) · [Install with Homebrew](#install-with-homebrew)
+<p>
+<a href="https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg"><img src="docs/assets/downloads/download_1.svg" width="240" height="48" alt="Download for macOS"></a>
+</p>
+
+[DMG · Preview · Apple silicon · v0.3.0 · macOS 14.2 or later](https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg)
+
+[Install with Homebrew](#install-with-homebrew) · [Release notes](https://github.com/Kian-hdr/clueless/releases/tag/v0.3.0)
+
+Clueless transcribes your Mac mic and call audio separately, then streams a short opening you can read at a glance. Use it for interview practice, or switch to notetaker mode when you just want a transcript. English and German are supported.
 
 ## Screenshots
 
