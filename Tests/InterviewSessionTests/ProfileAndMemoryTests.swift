@@ -62,11 +62,11 @@ final class ProfileAndMemoryTests: XCTestCase {
         session.transcript.apply(.init(role: .interviewer, text: "What would you check if the task had already completed?", isFinal: true, receivedAt: start.addingTimeInterval(14)))
         _ = NSApplication.shared
 
-        func export<V: View>(_ root: V, size: NSSize, name: String) throws {
+        func export<V: View>(_ root: V, size: NSSize, name: String, scheme: ColorScheme) throws {
             let frame = NSRect(origin: .zero, size: size)
-            let host = NSHostingView(rootView: root.frame(width: size.width, height: size.height).environment(\.colorScheme, .light))
+            let host = NSHostingView(rootView: root.frame(width: size.width, height: size.height).environment(\.colorScheme, scheme))
             let window = NSWindow(contentRect: frame, styleMask: [.borderless], backing: .buffered, defer: false)
-            window.appearance = NSAppearance(named: .aqua)
+            window.appearance = NSAppearance(named: scheme == .dark ? .darkAqua : .aqua)
             window.contentView = host
             host.frame = frame
             host.layoutSubtreeIfNeeded()
@@ -76,16 +76,20 @@ final class ProfileAndMemoryTests: XCTestCase {
             try png.write(to: directory.appendingPathComponent(name))
         }
 
-        let surface = CallSurfaceState()
-        func widget() -> some View {
-            CompactCallView(session: session, surface: surface, openWorkspace: {}, openSettings: {}, useOpaquePreview: true)
-                .padding(12).background(Color(red: 0.93, green: 0.94, blue: 0.96))
+        for scheme in [ColorScheme.light, .dark] {
+            let surface = CallSurfaceState()
+            let suffix = scheme == .dark ? "-dark" : ""
+            let backdrop = scheme == .dark ? Color.black : Color(red: 0.93, green: 0.94, blue: 0.96)
+            func widget() -> some View {
+                CompactCallView(session: session, surface: surface, openWorkspace: {}, openSettings: {}, useOpaquePreview: true)
+                    .padding(12).background(backdrop)
+            }
+            try export(widget(), size: .init(width: 388, height: 100), name: "compact\(suffix).png", scheme: scheme)
+            surface.toggleExpanded()
+            try export(widget(), size: .init(width: 468, height: 360), name: "answer\(suffix).png", scheme: scheme)
+            try export(TranscriptView(session: session).background(Color(nsColor: .windowBackgroundColor)),
+                       size: .init(width: 660, height: 280), name: "transcript\(suffix).png", scheme: scheme)
         }
-        try export(widget(), size: .init(width: 388, height: 100), name: "compact.png")
-        surface.toggleExpanded()
-        try export(widget(), size: .init(width: 468, height: 360), name: "answer.png")
-        try export(TranscriptView(session: session).background(Color(nsColor: .windowBackgroundColor)),
-                   size: .init(width: 660, height: 280), name: "transcript.png")
     }
 
 }

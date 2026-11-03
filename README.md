@@ -9,16 +9,31 @@
 
 Clueless transcribes your Mac mic and call audio separately, then streams a short opening you can read at a glance. Use it for interview practice, or switch to notetaker mode when you just want a transcript. English and German are supported.
 
-<div align="center">
-  <img src="docs/images/compact.png" width="388" alt="Compact Clueless floating controls">
-  <br>
-  <img src="docs/images/answer.png" width="468" alt="Expanded Clueless answer card with a short lead and three labeled bullets">
-</div>
+## Screenshots
+
+### Dark mode
+
+![Compact Clueless floating controls in dark mode](docs/images/compact-dark.png)
+
+![Expanded Clueless answer card in dark mode](docs/images/answer-dark.png)
+
+### Light mode
+
+![Compact Clueless floating controls in light mode](docs/images/compact.png)
+
+![Expanded Clueless answer card in light mode](docs/images/answer.png)
 
 <details>
-<summary>See the transcript workspace</summary>
-<br>
-<img src="docs/images/transcript.png" width="660" alt="Clueless Transcript tab showing timestamped mic and call transcript rows and Markdown export buttons">
+<summary>See the transcript in both appearances</summary>
+
+**Dark mode**
+
+![Dark transcript with timestamped audio sources and Markdown export controls](docs/images/transcript-dark.png)
+
+**Light mode**
+
+![Light transcript with timestamped audio sources and Markdown export controls](docs/images/transcript.png)
+
 </details>
 
 ## Set up on your Mac
