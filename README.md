@@ -41,6 +41,14 @@ Clueless transcribes your Mac mic and call audio separately, then streams a shor
 
 Download **Clueless-0.3.0-arm64.dmg** from [Clueless v0.3.0](https://github.com/Kian-hdr/clueless/releases/tag/v0.3.0), open it, and drag **Clueless** into **Applications**. Then follow the [first-run guide](docs/FIRST_RUN.md). This build is for Apple Silicon Macs running macOS 14.2 or later.
 
+## Install with Homebrew
+
+```bash
+brew install --cask Kian-hdr/clueless/clueless
+```
+
+If Homebrew requires trust for third-party casks, run `brew tap Kian-hdr/clueless` and `brew trust --cask Kian-hdr/clueless/clueless`, then retry the install. The [tap](https://github.com/Kian-hdr/homebrew-clueless) installs the same notarized Apple Silicon build. After installing, follow the [first-run guide](docs/FIRST_RUN.md).
+
 ## Build from source
 
 You'll need an **Apple Silicon Mac**, **macOS 14.2 or newer**, and **Xcode 27 or newer** to build the Icon Composer asset. The DMG does not require Xcode.
