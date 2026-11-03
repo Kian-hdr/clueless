@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 MODE="${1:-run}"
+CONFIGURATION="${CLUELESS_BUILD_CONFIGURATION:-debug}"
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 APP_NAME="Clueless"
 BUNDLE_ID="com.kiankonrad.Clueless"
 APP_BUNDLE="$ROOT_DIR/dist/$APP_NAME.app"
 cd "$ROOT_DIR"
 if [[ "$MODE" != "--build-only" ]]; then pkill -x "$APP_NAME" >/dev/null 2>&1 || true; fi
-swift build
-BUILD_DIR="$(swift build --show-bin-path)"
+swift build -c "$CONFIGURATION"
+BUILD_DIR="$(swift build -c "$CONFIGURATION" --show-bin-path)"
 "$ROOT_DIR/script/build_icon.sh"
 mkdir -p "$APP_BUNDLE/Contents/MacOS" "$APP_BUNDLE/Contents/Helpers" "$APP_BUNDLE/Contents/Resources"
 cp "$BUILD_DIR/InterviewAssistant" "$APP_BUNDLE/Contents/MacOS/$APP_NAME"
@@ -39,8 +40,10 @@ PLIST
 SIGN_ID="${CODE_SIGN_IDENTITY:-}"
 if [[ -z "$SIGN_ID" ]]; then SIGN_ID="$(security find-identity -v -p codesigning | sed -n 's/.*"\(Developer ID Application:.*\)"/\1/p' | head -1)"; fi
 if [[ -n "$SIGN_ID" ]]; then
-  codesign --force --sign "$SIGN_ID" --options runtime "$APP_BUNDLE/Contents/Helpers/CluelessFastAnswer"
-  codesign --force --sign "$SIGN_ID" --options runtime --entitlements "$ROOT_DIR/script/Clueless.entitlements" "$APP_BUNDLE"
+  SIGN_FLAGS=(--options runtime)
+  if [[ "$CONFIGURATION" == "release" ]]; then SIGN_FLAGS+=(--timestamp); fi
+  codesign --force --sign "$SIGN_ID" "${SIGN_FLAGS[@]}" "$APP_BUNDLE/Contents/Helpers/CluelessFastAnswer"
+  codesign --force --sign "$SIGN_ID" "${SIGN_FLAGS[@]}" --entitlements "$ROOT_DIR/script/Clueless.entitlements" "$APP_BUNDLE"
 else
   codesign --force --sign - "$APP_BUNDLE/Contents/Helpers/CluelessFastAnswer"
   codesign --force --sign - --entitlements "$ROOT_DIR/script/Clueless.entitlements" "$APP_BUNDLE"
