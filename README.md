@@ -1,10 +1,13 @@
-<h1 align="center">Clueless</h1>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/Clueless_Wordmark_Dark.svg">
+    <img src="docs/images/Clueless_Wordmark_Light.svg" width="150" alt="Clueless">
+  </picture>
+</p>
 
 <p align="center">A macOS interview practice assistant and meeting notetaker.</p>
 
 <p align="center"><img src="docs/images/icon.png" alt="Clueless app icon" width="96"></p>
-
-<h2 align="center">Download</h2>
 
 <p align="center">
 <a href="https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg"><img src="docs/assets/downloads/download_1.svg" width="240" height="48" alt="Download for macOS"></a>
