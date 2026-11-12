@@ -7,7 +7,13 @@
 
 <p align="center">A macOS interview practice assistant and meeting notetaker.</p>
 
-<p align="center"><img src="docs/images/icon.png" alt="Clueless app icon" width="96"></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/App_Icon_Dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="docs/assets/App_Icon_Default.png">
+    <img src="docs/assets/App_Icon_Default.png" width="96" alt="Clueless app icon">
+  </picture>
+</p>
 
 <p align="center">
 <a href="https://github.com/Kian-hdr/clueless/releases/download/v0.3.0/Clueless-0.3.0-arm64.dmg"><img src="docs/assets/downloads/download_1.svg" width="240" height="48" alt="Download for macOS"></a>
